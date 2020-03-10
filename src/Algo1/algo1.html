@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.css">
+		<script src="http://www.iut-fbleau.fr/projet/maths/?f=pagerank.js"></script>
+		<script src="http://www.iut-fbleau.fr/projet/maths/?f=logins.js"></script>
+		<script src="./js/classementAlgo1.js"></script>
+		<script src="./js/actionCheckboxAlgo1.js"></script>
+		<title>Projet Maths</title>
+	</header>
+	<body>
+	    <nav class="site-header py-4 bg-light">
+			<div class="container text-center">
+				<h1 class="d-none d-md-inline-block">Projet Maths </h1>
+				<p class="d-none d-md-inline-block display-4">2019-2020</p>
+			</div>
+		</nav>
+
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+	      <div class="navbar-brand">Projet Maths</div>
+	      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+	        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+	          <li class="nav-item active">
+	            <a class="nav-link" href="algo1.html">Algorithme 1</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="../Algo2/algo2.html">Algorithme 2</a>
+	          </li>
+	        </ul>
+	      </div>
+	    </nav>
+	    <br>
+	    <div class="container-fluid">
+
+	    	<a href="#" class="badge badge-warning">Attention</a>
+	    	<h3>Explication de l'algorithme</h3>
+	    	<p>
+	    		Vous utilisez actuellement l'algorithme 1. Cet algorithme calcul le "score" différemment de l'algorithme 2. En effet, celui-ci applique 1 point au score de la personne qui a reçue son vote.
+	    	</p>
+
+	    	<p>Exemple : Mettons que l'élève 1 n'a que 2 votes : un de tetu2018 et un de élève 2. Le score de élève 1 sera l'addition des scores des gens qui ont votés pour lui.</p>
+
+	    	<p>Soit : scoreEleve1 = 1 de tetu2018 + 1 de élève 2 =  2</p>
+
+	    	<p>
+	    		Notre classement s'effectue par l'addition du score et de pscore qui donnera un score total moyenné si il y a plusieurs matières en jeu. On le trie par ordre décroissant.
+	    	</p>
+
+		    <div class="card">
+		    	<div class="card-header text-center">
+					<h2>Classement des matières</h2>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card text-center">
+							<div class="card-body">
+								<h3>Choisir les matières</h3>
+								<input type ="checkbox" id="check" value="ACDA" onclick="checkMatiere(this)" uncheck>
+								<label for="ACDA">ACDA</label>
+								<input type ="checkbox" id="check" value="ANG" onclick="checkMatiere(this)" uncheck>
+								<label for="ANG">ANG</label>
+								<input type ="checkbox" id="check" value="APL" onclick="checkMatiere(this)" uncheck>
+								<label for="APL">APL</label>
+								<input type ="checkbox" id="check" value="ART" onclick="checkMatiere(this)" uncheck>
+								<label for="ART">ART</label>
+								<input type ="checkbox" id="check" value="ASR" onclick="checkMatiere(this)" uncheck>
+								<label for="ASR">ASR</label>
+								<input type ="checkbox" id="check" value="EC" onclick="checkMatiere(this)" uncheck>
+								<label for="EC">EC</label>
+								<input type ="checkbox" id="check" value="EGOD" onclick="checkMatiere(this)" uncheck>
+								<label for="EGOD">EGOD</label>
+								<input type ="checkbox" id="check" value="MAT" onclick="checkMatiere(this)" uncheck>
+								<label for="MATH">MATH</label>
+								<input type ="checkbox" id="check" value="SGBD" onclick="checkMatiere(this)" uncheck>
+								<label for="SGBD">SGBD</label>
+								<input type ="checkbox" id="check" value="SPORT" onclick="checkMatiere(this)" uncheck>
+								<label for="SPORT">SPORT</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card text-left">
+							<div class="card-body">
+								<div id="titre_matiere">
+									<h3>Résultat en : </h3>
+								</div>
+								<div id="tableau_classement" class="table-responsive">
+									<table class='table table-striped table-sm'>
+										<thead>
+											<tr><th colspan='6'>Classement des élèves</th></tr>
+											<tr><th>INDEX</th><th>LOGIN</th><th>NOM</th><th>SCORE</th><th>PSCORE</th><th>TOTAL</th></tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<footer class="my-5 pt-5 text-muted text-center text-small py-3 bg-light">
+		<p class="mb-2">&copy; 2019-2020 Jean-Baptiste Sanchez & Gaëtan Lodde</p>
+		<span class="text-muted"><a href="#">Retour en haut de page</a></span>
+	</footer>
+</html>
